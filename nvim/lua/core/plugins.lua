@@ -21,8 +21,9 @@ return require('packer').startup(function(use)
             vim.g.rainbow_active = 1
         end
     }
-    use 'puremourning/vimspector'
+    -- use 'puremourning/vimspector'
     use 'folke/tokyonight.nvim'
+    use 'epheien/termdbg'
     use 'voldikss/vim-floaterm'
     -- Packer
     use {
@@ -30,14 +31,20 @@ return require('packer').startup(function(use)
         run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
+            local ts_rainbow = requre('nvim-treesitter.configs').setup{
+                rainbow = {
+                    enable = true,
+                    query = 'rainbow-parens',
+                    strategy = requre('ts-rainbow').strategy.global,
+                }
+            }
+            ts_rainbow()
         end,
     }
     use 'nvim-tree/nvim-tree.lua'
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
     use 'navarasu/onedark.nvim'
-    -- use 'nvim-treesitter/nvim-treesitter'
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.0',
@@ -51,52 +58,8 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    use {
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
-   }
    use 'karb94/neoscroll.nvim'
    
-
-     use {'mfussenegger/nvim-dap',
-     requires = {
-       'williamboman/mason.nvim',
-       'jay-babu/mason-nvim-dap.nvim',
-     },
-     config = function()
-       local dap = require("dap")
-
-      require("mason").setup()
-      require("mason-nvim-dap").setup({
-         ensure_installed = {'cpptools'}
-      })
-
-       dap.adapters.cpptools = {
-         type = 'executable';
-         name = "cpptools",
-         command = vim.fn.stdpath('data') .. '/mason/bin/OpenDebugAD7',
-         args = {},
-         attach = {
-           pidProperty = "processId",
-           pidSelect = "ask"
-         },
-       }
-        dap.configurations.cpp = {
-         {
-           name = "Launch",
-           type = "cpptools",
-           request = "launch",
-           program = '${workspaceFolder}/main',
-           cwd = '${workspaceFolder}',
-           stopOnEntry = true,
-           args = {},
-           runInTerminal = false,
-         },
-       }
-     end,
-    }
-
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
 
