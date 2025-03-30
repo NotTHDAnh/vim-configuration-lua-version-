@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\share\\lua\\5.1\\?.lua;C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\lua\\5.1\\?.so"
+local package_path_str = "C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\share\\lua\\5.1\\?.lua;C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
+local install_cpath_pattern = "C:\\Users\\pct20\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\lua\\5.1\\?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -80,15 +80,47 @@ _G.packer_plugins = {
     path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim",
     url = "https://github.com/numtoStr/Comment.nvim"
   },
+  ale = {
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ale",
+    url = "https://github.com/dense-analysis/ale"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  catppuccin = {
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lualine-time"] = {
+    config = { "\27LJ\2\n¹\5\0\0\5\0\28\0-6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\3=\3\19\0025\3\20\0004\4\0\0=\4\b\0034\4\0\0=\4\n\0035\4\21\0=\4\f\0035\4\22\0=\4\14\0034\4\0\0=\4\16\0034\4\0\0=\4\18\3=\3\23\0024\3\0\0=\3\24\0024\3\0\0=\3\25\0024\3\0\0=\3\26\0024\3\0\0=\3\27\2B\0\2\1K\0\1\0\15extensions\20inactive_winbar\vwinbar\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\6\14lualine_z\0\14lualine_y\0\14lualine_x\0\14lualine_c\0\14lualine_b\0\14lualine_a\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\2\0\0\nctime\14lualine_c\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\6\14lualine_z\0\14lualine_y\0\14lualine_x\0\14lualine_c\0\14lualine_b\0\14lualine_a\0\1\2\0\0\tmode\foptions\1\0\a\rsections\0\15extensions\0\20inactive_winbar\0\vwinbar\0\ftabline\0\22inactive_sections\0\foptions\0\1\0\1\ntheme\tauto\nsetup\flualine\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine-time",
+    url = "https://github.com/archibate/lualine-time"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["monokai-pro.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\monokai-pro.nvim",
+    url = "https://github.com/loctvl842/monokai-pro.nvim"
+  },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -115,10 +147,31 @@ _G.packer_plugins = {
     path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  rainbow = {
+    config = { "\27LJ\2\n0\0\0\2\0\3\0\0056\0\0\0009\0\1\0)\1\1\0=\1\2\0K\0\1\0\19rainbow_active\6g\bvim\0" },
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rainbow",
+    url = "https://github.com/luochen1990/rainbow"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  termdbg = {
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\termdbg",
+    url = "https://github.com/epheien/termdbg"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-expand"] = {
+    loaded = true,
+    path = "C:\\Users\\pct20\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-expand",
+    url = "https://github.com/Olical/vim-expand"
   },
   ["vim-floaterm"] = {
     loaded = true,
@@ -128,6 +181,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: lualine-time
+time([[Config for lualine-time]], true)
+try_loadstring("\27LJ\2\n¹\5\0\0\5\0\28\0-6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\a\0005\4\6\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\3=\3\19\0025\3\20\0004\4\0\0=\4\b\0034\4\0\0=\4\n\0035\4\21\0=\4\f\0035\4\22\0=\4\14\0034\4\0\0=\4\16\0034\4\0\0=\4\18\3=\3\23\0024\3\0\0=\3\24\0024\3\0\0=\3\25\0024\3\0\0=\3\26\0024\3\0\0=\3\27\2B\0\2\1K\0\1\0\15extensions\20inactive_winbar\vwinbar\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\6\14lualine_z\0\14lualine_y\0\14lualine_x\0\14lualine_c\0\14lualine_b\0\14lualine_a\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\2\0\0\nctime\14lualine_c\1\2\0\0\rfilename\14lualine_b\1\4\0\0\vbranch\tdiff\16diagnostics\14lualine_a\1\0\6\14lualine_z\0\14lualine_y\0\14lualine_x\0\14lualine_c\0\14lualine_b\0\14lualine_a\0\1\2\0\0\tmode\foptions\1\0\a\rsections\0\15extensions\0\20inactive_winbar\0\vwinbar\0\ftabline\0\22inactive_sections\0\foptions\0\1\0\1\ntheme\tauto\nsetup\flualine\frequire\0", "config", "lualine-time")
+time([[Config for lualine-time]], false)
+-- Config for: monokai-pro.nvim
+time([[Config for monokai-pro.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0", "config", "monokai-pro.nvim")
+time([[Config for monokai-pro.nvim]], false)
+-- Config for: rainbow
+time([[Config for rainbow]], true)
+try_loadstring("\27LJ\2\n0\0\0\2\0\3\0\0056\0\0\0009\0\1\0)\1\1\0=\1\2\0K\0\1\0\19rainbow_active\6g\bvim\0", "config", "rainbow")
+time([[Config for rainbow]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")

@@ -1,7 +1,6 @@
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = 'onedark',
         section_separators = {left = '', right = ''},
         component_separators = {left = '', right = ''}
     },
@@ -24,7 +23,11 @@ require('lualine').setup {
         },
 
         lualine_x = {
-            {'fileformat',
+            {
+            'cdate',
+            'ctime',
+            'fileformat',
+
             symbol = {
                  unix = '', -- e712
                  dos = '',  -- e70f
